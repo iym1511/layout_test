@@ -1,0 +1,101 @@
+body{
+    margin: 0px; /*기본 여백 제거*/
+}
+.header{
+    text-align: center;
+    background-color: green;
+    padding: 10px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav ul li{   
+    font-weight: bolder;
+}
+.nav ul li:hover{
+    transition: all 1s;
+    color: gray;
+    text-shadow: 1px 1px 1px darkblue;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 900px;
+    margin-top: 10px;
+}
+.flexbox1{
+    border: 3px solid black;
+    grid-column: 1/3;
+    grid-row: 1/4;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.flexbox2 h2{
+    border-bottom: 1px dashed black;
+}
+.flexbox1 >iframe{
+    width: 95%;
+    height: 300px;
+    margin: 10px 10px 0 10px;
+}
+.flexbox2{
+    border: 3px solid black;
+    grid-column: 3/6;
+    grid-row: 1/3;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.flexbox3{
+    border: 3px solid black;
+    grid-column: 3/6;
+    grid-row: 3/4;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.footer{
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+}
+@media screen and (max-width:760px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+    .header{
+        background-color: midnightblue;
+        color: white;
+    }
+    .nav ul li{   
+        list-style: none;
+        display: inline;
+        padding: 0 100px 0 100px;
+        font-weight: bolder;
+    }
+    .flexbox1{
+        border: 3px solid black;
+        grid-column: 1/4;
+        grid-row: 1/4;
+    }
+    .flexbox2{
+        border: 3px solid black;
+        grid-column: 1/4;
+        grid-row: 4/6;
+    }
+    .flexbox3{
+        border: 3px solid black;
+        grid-column: 1/4;
+        grid-row: 6/8;
+
+    }
+}
